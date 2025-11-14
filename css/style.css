@@ -135,7 +135,7 @@ div.introducao {
   border-radius: 50px 50px 0 0;
 }
 div.logo img {
-  padding: 107px 107px 79px 107px;
+  padding: 107px 107px 60px 107px;
   width: 156px;
   height: 144px;
 }
@@ -170,7 +170,7 @@ div.redes h1 {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  letter-spacing: 0.63px;
+  letter-spacing: 2.5px;
   color: var(--cor-0);
 }
 div.redes h1:hover {
