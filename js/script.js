@@ -44,14 +44,37 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener("DOMContentLoaded", function() {
     var buttons = document.querySelectorAll(".soundButton");
     
-    // É uma boa prática redefinir o tempo para permitir cliques rápidos
+
     var audio = new Audio('assets/sons/click-sound.mp3'); 
     audio.volume = 0.4;
 
     buttons.forEach(function(button) {
         button.addEventListener("click", function() {
             audio.play();
-            audio.currentTime = 0; // Adicionado para permitir repetição imediata
+            audio.currentTime = 0; 
         });
     });
 });
+
+const shareButton = document.getElementById('share-button');
+
+if (shareButton) {
+    shareButton.addEventListener('click', () => {
+
+        if (navigator.share) {
+            navigator.share({
+                title: 'BERLANTEC Links', 
+                text: 'Acesse todos os links oficiais da BERLANTEC em um só lugar!',
+                url: window.location.href
+            })
+            .then(() => console.log('Link compartilhado com sucesso!'))
+            .catch((error) => console.log('Erro ao compartilhar:', error));
+        } else {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('O compartilhamento nativo não é suportado. O link foi copiado para a área de transferência!');
+            }).catch(err => {
+                console.error('Erro ao copiar o texto: ', err);
+            });
+        }
+    });
+}
