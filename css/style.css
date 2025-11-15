@@ -120,7 +120,7 @@ img {
 }
 /* Conteúdo Principal */
 section.introducao-bg {
-  background-color: var(--cor-3);
+  background-color: var(--cor-2); 
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -129,7 +129,7 @@ div.introducao {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: var(--cor-0);
+  background-color: var(--cor-1); 
   width: 592px;
   height: calc(100% - 48px);
   position: relative;
@@ -137,7 +137,7 @@ div.introducao {
   bottom: 0;
   margin: auto;
   border-radius: 50px 50px 0 0;
-  box-shadow: 0px -10px 20px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -5px 10px 5px rgba(0, 0, 0, 0.1);
 }
 div.logo img {
   object-fit: cover;
@@ -173,7 +173,6 @@ div.logo .titulo {
 .link-button i {
   font-size: 1.2em;
 }
-
 .redes-links li {
   display: flex;
   flex-wrap: nowrap;
@@ -197,7 +196,7 @@ div.logo .titulo {
   border: none;
   background: none;
   cursor: pointer;
-  color: var(--cor-0);
+  color: #ffffff;
 }
 .redesprincipais i {
   display: flex;
@@ -236,7 +235,8 @@ div.redes a {
   position: relative;
   text-align: center;
   bottom: 0;
-  color: var(--cor-10);
+  /* Altera a cor-10 para a nova cor-10 (texto claro) do dark-mode */
+  color: var(--cor-10); 
   font-family: "Poppins", sans-serif !important;
   font-size: 0.7rem;
   font-style: normal;
@@ -281,3 +281,56 @@ div.redes a {
     font-size: 9px;
   }
 }
+
+/* ---------------------------------------------------- */
+/* Botão Dark Mode */
+/* ---------------------------------------------------- */
+html.dark-mode {
+  --cor-0: #1a1a1a;
+  --cor-1: #1B1F24; 
+  --cor-2: #22272F; 
+  --cor-3: #595959; 
+  --cor-9: #9c9c9c;
+  --cor-10: #b2b2b2; 
+  --cor-11: #f8f8f8;
+  --cor-12: #fcfcfc; 
+  --cor-13: #ffffff; 
+  --cor-p3: #0056b3;
+}
+#dark-mode-toggle {
+  position: absolute; /* Posição fixa em relação ao elemento pai */
+  top: 15px;
+  left: 15px;
+  z-index: 10; /* Garante que fique acima de outros elementos */
+  background: var(--cor-p3);
+  color: var(--cor-0); /* Cor do ícone */
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#dark-mode-toggle i {
+  font-size: 20px;
+}
+
+#dark-mode-toggle:hover {
+  background: #154380;
+}
+
+/* Ajuste no mobile */
+@media (max-width: 600px) {
+    #dark-mode-toggle {
+        position: fixed; /* Mantenha-o fixo na tela móvel */
+        top: 10px;
+        left: 10px;
+    }
+}
+
+
