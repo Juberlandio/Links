@@ -148,9 +148,17 @@ div.logo .titulo {
   text-transform: uppercase;
   text-align: center;
   color: var(--cor-p2);
-  font-size: 1.6em;
+  font-size: 1.75em;
   border-radius: 25px;
-  font-weight: 500;
+  font-weight: 200;
+}
+div.logo .sub-titulo {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--cor-13);
+  font-size: 0.688em;
+  border-radius: 25px;
+  font-weight: 200;
 }
 .link-button {
   display: block;
