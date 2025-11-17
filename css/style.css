@@ -138,7 +138,10 @@ div.introducao {
   border-radius: 30px 30px 0 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-div.logo img {
+div.logo {
+   padding-top: 50px;
+}
+div.logo img svg {
   object-fit: cover;
   width: 160px;
   height: 160px;
@@ -266,8 +269,11 @@ div.redes a {
     position: relative;
     box-shadow: none;
   }
-  div.logo img {
-    padding-top: 50px;
+  div.logo {
+   padding-top: 20px;
+}
+  div.logo img svg {
+    width: 60px;
   }
   div.redes {
     background-color: var(--cor-p3);
