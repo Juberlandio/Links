@@ -181,7 +181,7 @@ div.logo .sub-titulo {
   background-color: #154380;
 }
 .link-button i {
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 .redes-links li {
   display: flex;
@@ -270,7 +270,7 @@ div.redes a {
     box-shadow: none;
   }
   div.logo {
-   padding-top: 20px;
+   padding-top: 40px;
 }
   div.logo img svg {
     width: 60px;
@@ -293,6 +293,16 @@ div.redes a {
   .footer p {
     font-size: 9px;
   }
+}
+.redesprincipais i {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+   /* <-- Adicione esta linha */
 }
 /* ---------------------------------------------------- */
 /* Botão Dark Mode */
@@ -373,4 +383,4 @@ html.dark-mode {
     }
 }
 
-
+/* Fim do Dark Mode */
