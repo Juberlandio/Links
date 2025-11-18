@@ -46,7 +46,7 @@ img {
 :root {
   --cor-0: #ffffff;
   --cor-1: #fcfcfc;
-  --cor-2: #F8F9FA;
+  --cor-2: #f8f9fa;
   --cor-3: #f8f8f8;
   --cor-4: #cccccc;
   --cor-5: #b2b2b2;
@@ -119,7 +119,7 @@ img {
 }
 /* Conteúdo Principal */
 section.introducao-bg {
-  background-color: var(--cor-2); 
+  background-color: var(--cor-2);
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -128,7 +128,7 @@ div.introducao {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: var(--cor-1); 
+  background-color: var(--cor-1);
   width: 592px;
   height: calc(100% - 48px);
   position: relative;
@@ -139,13 +139,12 @@ div.introducao {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 div.logo {
-   padding-top: 50px;
-}
-div.logo img svg {
-  object-fit: cover;
-  width: 160px;
-  height: 160px;
   padding-top: 50px;
+}
+div.logo img {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
 }
 div.logo .titulo {
   text-transform: uppercase;
@@ -238,7 +237,7 @@ div.redes a {
   text-align: center;
   bottom: 0;
   /* Altera a cor-10 para a nova cor-10 (texto claro) do dark-mode */
-  color: var(--cor-10); 
+  color: var(--cor-10);
   font-family: "Poppins", sans-serif !important;
   font-size: 0.7rem;
   font-style: normal;
@@ -262,10 +261,7 @@ div.redes a {
     box-shadow: none;
   }
   div.logo {
-   padding-top: 40px;
-}
-  div.logo img svg {
-    width: 60px;
+    padding-top: 40px;
   }
   div.redes {
     background-color: var(--cor-p3);
@@ -291,14 +287,14 @@ div.redes a {
 /* ---------------------------------------------------- */
 html.dark-mode {
   --cor-0: #1a1a1a;
-  --cor-1: #1B1F24; 
-  --cor-2: #22272F; 
-  --cor-3: #595959; 
+  --cor-1: #1b1f24;
+  --cor-2: #22272f;
+  --cor-3: #595959;
   --cor-9: #9c9c9c;
-  --cor-10: #b2b2b2; 
+  --cor-10: #b2b2b2;
   --cor-11: #f8f8f8;
-  --cor-12: #fcfcfc; 
-  --cor-13: #ffffff; 
+  --cor-12: #fcfcfc;
+  --cor-13: #ffffff;
   --cor-p3: #0056b3;
 }
 #dark-mode-toggle {
@@ -327,64 +323,64 @@ html.dark-mode {
 }
 /* Ajuste no mobile */
 @media (max-width: 600px) {
-    #dark-mode-toggle {
-        position: fixed; /* Mantenha-o fixo na tela móvel */
-        top: 10px;
-        left: 10px;
-    }
+  #dark-mode-toggle {
+    position: fixed; /* Mantenha-o fixo na tela móvel */
+    top: 10px;
+    left: 10px;
+  }
 }
 #share-button {
-    position: absolute;
-    top: 15px;
-    right: 15px; 
-    z-index: 10;
-    background: var(--cor-p3);
-    color: #ffffff; 
-    border: none;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+  background: var(--cor-p3);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 #share-button i {
-    font-size: 20px;
+  font-size: 20px;
 }
 #share-button:hover {
-    background: #154380;
+  background: #154380;
 }
 @media (max-width: 600px) {
-    #share-button {
-        position: fixed; 
-        top: 10px;
-        right: 10px;
-    }
+  #share-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
 }
 
 /* Fim do Dark Mode */
 
 /* redes */
 .redesprincipais i {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    
-    font-weight: 300 !important; 
-    font-size: 1.1em;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  font-weight: 300 !important;
+  font-size: 1.1em;
 }
 
 .redesprincipais span {
-    font-family: "Poppins", sans-serif !important;
-    font-weight: 500;
-    width: 100%;
-    padding: 15px;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 500;
+  width: 100%;
+  padding: 15px;
 }
 /* fim redes */

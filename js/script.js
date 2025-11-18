@@ -2,49 +2,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('dark-mode-toggle');
     const htmlElement = document.documentElement;
 
-    // Função para aplicar o tema
     function applyTheme(isDark) {
         if (isDark) {
             htmlElement.classList.add('dark-mode');
-            toggleButton.querySelector('i').className = 'ri-sun-line'; // Ícone de sol para voltar ao modo claro
+            toggleButton.querySelector('i').className = 'ph ph-sun'; 
         } else {
             htmlElement.classList.remove('dark-mode');
-            toggleButton.querySelector('i').className = 'ri-moon-line'; // Ícone de lua para ir ao modo escuro
+            toggleButton.querySelector('i').className = 'ph ph-moon'; 
         }
     }
 
-    // 1. Verificar a preferência do usuário no armazenamento local (localStorage)
     const savedTheme = localStorage.getItem('theme');
     
-    // FORÇAR O TEMA CLARO COMO PADRÃO INICIAL:
     if (savedTheme) {
-        // Se houver tema salvo (o usuário clicou antes), aplique-o
         applyTheme(savedTheme === 'dark');
     } else {
-        // Se não houver tema salvo, aplique SEMPRE o tema claro (isDark = false)
         applyTheme(false); 
     }
 
-    // 2. Adicionar o evento de clique ao botão
     toggleButton.addEventListener('click', () => {
         const isDark = htmlElement.classList.toggle('dark-mode');
         
-        // Atualiza o ícone e salva a preferência
         if (isDark) {
-            toggleButton.querySelector('i').className = 'ri-sun-line';
+            toggleButton.querySelector('i').className = 'ph ph-sun';
             localStorage.setItem('theme', 'dark');
         } else {
-            toggleButton.querySelector('i').className = 'ri-moon-line';
+            toggleButton.querySelector('i').className = 'ph ph-moon';
             localStorage.setItem('theme', 'light');
         }
     });
 });
 
-
 document.addEventListener("DOMContentLoaded", function() {
     var buttons = document.querySelectorAll(".soundButton");
-    
-
     var audio = new Audio('assets/sons/click-sound.mp3'); 
     audio.volume = 0.4;
 
@@ -60,7 +50,6 @@ const shareButton = document.getElementById('share-button');
 
 if (shareButton) {
     shareButton.addEventListener('click', () => {
-
         if (navigator.share) {
             navigator.share({
                 title: 'BERLANTEC Links', 
