@@ -208,15 +208,7 @@ div.logo .sub-titulo {
   cursor: pointer;
   color: #ffffff;
 }
-.redesprincipais i {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
-}
+
 .redesprincipais span {
   font-family: "Poppins", sans-serif !important;
   width: 100%;
@@ -293,16 +285,6 @@ div.redes a {
   .footer p {
     font-size: 9px;
   }
-}
-.redesprincipais i {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
-   /* <-- Adicione esta linha */
 }
 /* ---------------------------------------------------- */
 /* Botão Dark Mode */
@@ -384,3 +366,25 @@ html.dark-mode {
 }
 
 /* Fim do Dark Mode */
+
+/* redes */
+.redesprincipais i {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    font-weight: 300 !important; 
+    font-size: 1.1em;
+}
+
+.redesprincipais span {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 500;
+    width: 100%;
+    padding: 15px;
+}
+/* fim redes */
