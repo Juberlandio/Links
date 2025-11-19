@@ -5,10 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function applyTheme(isDark) {
         if (isDark) {
             htmlElement.classList.add('dark-mode');
-            toggleButton.querySelector('i').className = 'ph ph-sun'; 
+            // MUDANÇA AQUI: de 'ph ph-sun' para 'ri-sun-line'
+            toggleButton.querySelector('i').className = 'ri-sun-line'; 
         } else {
             htmlElement.classList.remove('dark-mode');
-            toggleButton.querySelector('i').className = 'ph ph-moon'; 
+            // MUDANÇA AQUI: de 'ph ph-moon' para 'ri-moon-line'
+            toggleButton.querySelector('i').className = 'ri-moon-line'; 
         }
     }
 
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedTheme) {
         applyTheme(savedTheme === 'dark');
     } else {
+        // Se não houver tema salvo, define o tema inicial como claro
         applyTheme(false); 
     }
 
@@ -24,14 +27,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const isDark = htmlElement.classList.toggle('dark-mode');
         
         if (isDark) {
-            toggleButton.querySelector('i').className = 'ph ph-sun';
+            // MUDANÇA AQUI: de 'ph ph-sun' para 'ri-sun-line'
+            toggleButton.querySelector('i').className = 'ri-sun-line';
             localStorage.setItem('theme', 'dark');
         } else {
-            toggleButton.querySelector('i').className = 'ph ph-moon';
+            // MUDANÇA AQUI: de 'ph ph-moon' para 'ri-moon-line'
+            toggleButton.querySelector('i').className = 'ri-moon-line';
             localStorage.setItem('theme', 'light');
         }
     });
 });
+// ... o resto do seu código JavaScript continua ...
 
 document.addEventListener("DOMContentLoaded", function() {
     var buttons = document.querySelectorAll(".soundButton");
