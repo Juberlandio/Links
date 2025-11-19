@@ -388,3 +388,15 @@ html.dark-mode {
 }
 /* fim redes */
 
+/* ocultar */
+.options-button {
+    display: none; 
+    
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+/* fim ocultar */
