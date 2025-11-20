@@ -42,6 +42,7 @@ img {
   margin: auto;
   text-align: center;
 }
+
 /* Cores */
 :root {
   --cor-0: #ffffff;
@@ -63,60 +64,25 @@ img {
   --cor-p3: #1e406d;
   --cor-p4: #000000cc;
 }
-.cor-0 {
-  color: var(--cor-0);
-}
-.cor-1 {
-  color: var(--cor-1);
-}
-.cor-2 {
-  color: var(--cor-2);
-}
-.cor-3 {
-  color: var(--cor-3);
-}
-.cor-4 {
-  color: var(--cor-4);
-}
-.cor-5 {
-  color: var(--cor-5);
-}
-.cor-6 {
-  color: var(--cor-6);
-}
-.cor-7 {
-  color: var(--cor-7);
-}
-.cor-8 {
-  color: var(--cor-8);
-}
-.cor-9 {
-  color: var(--cor-9);
-}
-.cor-10 {
-  color: var(--cor-10);
-}
-.cor-11 {
-  color: var(--cor-11);
-}
-.cor-12 {
-  color: var(--cor-12);
-}
-.cor-13 {
-  color: var(--cor-13);
-}
-.cor-p1 {
-  color: var(--cor-p1);
-}
-.cor-p2 {
-  color: var(--cor-p2);
-}
-.cor-p3 {
-  color: var(--cor-p3);
-}
-.cor-p4 {
-  color: var(--cor-p4);
-}
+.cor-0 { color: var(--cor-0); }
+.cor-1 { color: var(--cor-1); }
+.cor-2 { color: var(--cor-2); }
+.cor-3 { color: var(--cor-3); }
+.cor-4 { color: var(--cor-4); }
+.cor-5 { color: var(--cor-5); }
+.cor-6 { color: var(--cor-6); }
+.cor-7 { color: var(--cor-7); }
+.cor-8 { color: var(--cor-8); }
+.cor-9 { color: var(--cor-9); }
+.cor-10 { color: var(--cor-10); }
+.cor-11 { color: var(--cor-11); }
+.cor-12 { color: var(--cor-12); }
+.cor-13 { color: var(--cor-13); }
+.cor-p1 { color: var(--cor-p1); }
+.cor-p2 { color: var(--cor-p2); }
+.cor-p3 { color: var(--cor-p3); }
+.cor-p4 { color: var(--cor-p4); }
+
 /* Conteúdo Principal */
 section.introducao-bg {
   background-color: var(--cor-2);
@@ -182,30 +148,23 @@ div.logo .sub-titulo {
 .link-button i {
   font-size: 1.3em;
 }
-.redes-links li {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--cor-p3);
-  max-width: 750px;
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  border-radius: 40px;
-  position: relative;
-  border: 1px solid var(--cor-13);
-}
-
+/* --- CORREÇÃO DO BOTÃO OPÇÕES --- */
 .options-button {
-  font-size: 24px; /* Ajuste o tamanho conforme necessário */
+  font-size: 24px;
   font-weight: bold;
   border: none;
-  background: none;
+  background: transparent;
   cursor: pointer;
   color: #ffffff;
+  
+  /* Correções de alinhamento */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  height: 100%;
 }
 
 .redesprincipais span {
@@ -236,7 +195,6 @@ div.redes a {
   position: relative;
   text-align: center;
   bottom: 0;
-  /* Altera a cor-10 para a nova cor-10 (texto claro) do dark-mode */
   color: var(--cor-10);
   font-family: "Poppins", sans-serif !important;
   font-size: 0.7rem;
@@ -248,6 +206,8 @@ div.redes a {
   width: 24px;
   height: 24px;
 }
+
+/* Mobile */
 @media (max-width: 600px) {
   section.introducao-bg {
     background-color: var(--cor-0);
@@ -286,6 +246,7 @@ div.redes a {
     font-size: 9px;
   }
 }
+
 /* ---------------------------------------------------- */
 /* Botão Dark Mode */
 /* ---------------------------------------------------- */
@@ -302,12 +263,12 @@ html.dark-mode {
   --cor-p3: #0056b3;
 }
 #dark-mode-toggle {
-  position: absolute; /* Posição fixa em relação ao elemento pai */
+  position: absolute;
   top: 15px;
   left: 15px;
-  z-index: 10; /* Garante que fique acima de outros elementos */
+  z-index: 10;
   background: var(--cor-p3);
-  color: var(--cor-0); /* Cor do ícone */
+  color: var(--cor-0);
   border: none;
   border-radius: 50%;
   width: 55px;
@@ -325,10 +286,9 @@ html.dark-mode {
 #dark-mode-toggle:hover {
   background: #154380;
 }
-/* Ajuste no mobile */
 @media (max-width: 600px) {
   #dark-mode-toggle {
-    position: fixed; /* Mantenha-o fixo na tela móvel */
+    position: fixed;
     top: 10px;
     left: 10px;
   }
@@ -365,9 +325,7 @@ html.dark-mode {
   }
 }
 
-/* Fim do Dark Mode */
-
-/* redes */
+/* Redes Principais (Container dos botões) */
 .redesprincipais {
   display: flex;
   flex-wrap: nowrap;
@@ -386,17 +344,3 @@ html.dark-mode {
   padding: 11px;
   font-size: 1em;
 }
-/* fim redes */
-
-/* ocultar */
-.options-button {
-    display: none; 
-    
-    font-size: 24px;
-    font-weight: bold;
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: #ffffff;
-}
-/* fim ocultar */
