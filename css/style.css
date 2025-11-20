@@ -172,22 +172,6 @@ div.logo .sub-titulo {
   width: 100%;
   padding: 15px;
 }
-div.redes a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 66px;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.313rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 2.5px;
-  color: var(--cor-0);
-}
 .footer p {
   display: flex;
   justify-content: center;
